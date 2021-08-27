@@ -3,6 +3,9 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="1.7">
       <module name="MultiModulesDota.app" target="11" />
+      <module name="MultiModulesDota.components" target="11" />
+      <module name="MultiModulesDota.hero.ui-heroDetail" target="11" />
+      <module name="MultiModulesDota.hero.ui-heroList" target="11" />
       <module name="MyDota.buildSrc" target="11" />
     </bytecodeTargetLevel>
   </component>
