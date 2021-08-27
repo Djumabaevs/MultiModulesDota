@@ -15,6 +15,9 @@
             <option value="$PROJECT_DIR$/core" />
             <option value="$PROJECT_DIR$/hero" />
             <option value="$PROJECT_DIR$/hero/hero-datasource" />
+            <option value="$PROJECT_DIR$/hero/hero-datasource-test" />
+            <option value="$PROJECT_DIR$/hero/hero-domain" />
+            <option value="$PROJECT_DIR$/hero/hero-interactors" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
