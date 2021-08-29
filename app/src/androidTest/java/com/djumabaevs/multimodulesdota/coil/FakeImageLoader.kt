@@ -5,9 +5,9 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import coil.ImageLoader
 import coil.bitmap.BitmapPool
-import coil.request.DefaultRequestOptions
-import coil.request.Disposable
-import coil.request.ImageRequest
+import coil.decode.DataSource
+import coil.memory.MemoryCache
+import coil.request.*
 
 class FakeImageLoader {
     companion object Factory {
@@ -30,6 +30,19 @@ class FakeImageLoader {
                 request.target?.onStart(placeholder = ColorDrawable(Color.BLACK))
                 request.target?.onSuccess(result = ColorDrawable(Color.BLACK))
                 return disposable
+            }
+
+            override suspend fun execute(request: ImageRequest): ImageResult {
+                return SuccessResult(
+                    drawable = ColorDrawable(Color.BLACK),
+                    request = request,
+                    metadata = ImageResult.Metadata(
+                        memoryCacheKey = MemoryCache.Key(""),
+                        isSampled = false,
+                        dataSource = DataSource.MEMORY_CACHE,
+                        isPlaceholderMemoryCacheKeyPresent = false
+                    )
+                )
             }
         }
     }
