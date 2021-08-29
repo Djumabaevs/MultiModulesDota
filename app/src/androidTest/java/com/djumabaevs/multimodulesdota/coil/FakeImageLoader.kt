@@ -32,6 +32,7 @@ class FakeImageLoader {
                     return disposable
                 }
 
+
                 override suspend fun execute(request: ImageRequest): ImageResult {
                     return SuccessResult(
                         drawable = ColorDrawable(Color.BLACK),
